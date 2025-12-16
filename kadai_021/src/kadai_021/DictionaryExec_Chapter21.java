@@ -11,17 +11,12 @@ public class DictionaryExec_Chapter21 {
 		list.add("grape");
 		list.add("orange");
 		
-		Dictionary_Chapter21.add();
+		Dictionary_Chapter21 dictionaly = new Dictionary_Chapter21();
+		dictionaly.add();
 		
 		for (int i = 0; i < list.size(); i++) {
 			String target =  list.get(i);
-			
-			if(Dictionary_Chapter21.hashMap.containsKey(target)){
-				String mean = Dictionary_Chapter21.hashMap.get(target);
-				System.out.println(target+"の意味は"+mean);
-			}else {
-				System.out.println(target+"は辞書に存在しません");
-			}
+			dictionaly.search(target);
 		}
 	}
 
