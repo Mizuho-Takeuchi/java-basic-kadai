@@ -3,9 +3,9 @@ package kadai_021;
 import java.util.HashMap;
 
 public class Dictionary_Chapter21 {
-	static HashMap<String,String> hashMap =new HashMap<String,String> ();
+	HashMap<String,String> hashMap =new HashMap<String,String> ();
 	
-	public static void add() {
+	public void add() {
 		hashMap.put("apple", "りんご");
 		hashMap.put("peach", "桃");
 		hashMap.put("banana", "バナナ");
@@ -17,5 +17,13 @@ public class Dictionary_Chapter21 {
 	    hashMap.put("muscat", "マスカット");
 	    hashMap.put("cherry", "さくらんぼ");
 	}
-
+	
+	public void search(String target) { 
+		if(hashMap.containsKey(target)){
+			String mean = hashMap.get(target);
+			System.out.println(target+"の意味は"+mean);
+		}else {
+			System.out.println(target+"は辞書に存在しません");
+		}
+	}
 }
