@@ -17,7 +17,7 @@ public class Jyanken_Chapter28 {
 			input = scanner.next();
 			
 			if(!(input.equals("r"))&&!(input.equals("s"))&&!(input.equals("p"))) {
-				System.out.println("入力が誤っています");
+				System.out.println("グーのr、チョキのs、パーのpのどれかを入力してください");
 			}
 			
 		}while(!(input.equals("r"))&&!(input.equals("s"))&&!(input.equals("p")));
@@ -34,15 +34,12 @@ public class Jyanken_Chapter28 {
 		hands[1]="s";
 		hands[2]="p";
 		
-		int i =(int)(Math.random()*3);
+		int i =(int)Math.floor(Math.random()*3);
 		String hand = hands[i];
 		return hand;
 	}
 	
-	public void playGame(String me_alphabet) {
-		//ランダムで相手の手を取得
-		String you_alphabet= getRandom();
-		
+	public void playGame(String me_alphabet, String you_alphabet) {
 		//アルファベットを文字にするルール
 		HashMap<String,String> map = new HashMap<String,String>();
 		map.put("r", "グー");     // r → グー

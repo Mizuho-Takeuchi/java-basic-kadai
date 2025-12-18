@@ -8,9 +8,9 @@ public class JyankenExec_Chapter28 {
 		//自分のじゃんけんの手を入力する
 		String me_alphabet = jyanken.getMyChoice();
 		//対戦相手のじゃんけんの手が乱数で選ばれる
-		jyanken.getRandom();
+		String you_alphabet = jyanken.getRandom();
 		//じゃんけんの結果を出力する
-		jyanken.playGame(me_alphabet);
+		jyanken.playGame(me_alphabet,you_alphabet);
 	}
 
 }
